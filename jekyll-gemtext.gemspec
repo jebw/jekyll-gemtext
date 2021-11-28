@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name        = 'jekyll-gemtext'
-  gem.version     = '0.1.0'
+  gem.version     = '0.1.1'
   gem.summary     = 'Gemtext extension for the Jekyll static site generator'
   gem.description = <<~DESCRIPTION
     Use Gemtext source files (*.gmi and *.gemini) files in the Jekyll static site generator
@@ -22,10 +22,10 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 2.5.0'
 
   gem.add_dependency 'gmi2html', '~> 0.1'
+  gem.add_dependency "jekyll", ">= 3.7", "< 5.0"
 
   gem.add_development_dependency 'bundler', '~> 2.2'
   gem.add_development_dependency 'byebug', '~> 11.1'
-  gem.add_development_dependency "jekyll", ">= 3.7", "< 5.0"
   gem.add_development_dependency 'rake', '~> 13.0'
   gem.add_development_dependency 'rspec', '~> 3.10'
   gem.add_development_dependency 'rubocop', '~> 1.23'
